@@ -23,6 +23,10 @@ public class PostService {
 
     private final String TOPIC = "posts";
 
+    public Post find(String postId) {
+        return postRepository.findById(postId).orElseThrow();
+    }
+
     @AllArgsConstructor
     @NoArgsConstructor
     @Getter
